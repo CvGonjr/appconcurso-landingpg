@@ -1,100 +1,64 @@
-import { Folders, Brain, PenTool } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-
-const pillars = [
-  {
-    icon: Folders,
-    title: "Centralize em 1 só lugar",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-    badge: "Freemium disponível",
-    badgeVariant: "secondary" as const,
-    benefits: [
-      "Importa PDFs, vídeos, questões de qualquer cursinho",
-      "Organização automática por matéria/assunto",
-      "Busca inteligente: encontre qualquer material em 2 segundos"
-    ]
-  },
-  {
-    icon: Brain,
-    title: "Método científico comprovado",
-    color: "text-accent-purple",
-    bgColor: "bg-accent-purple/10",
-    badge: "Premium",
-    badgeVariant: "default" as const,
-    benefits: [
-      "Plano adaptado ao SEU edital e rotina",
-      "Revisões espaçadas (técnica comprovada)",
-      "Mapas mentais e resumos gerados por IA"
-    ]
-  },
-  {
-    icon: PenTool,
-    title: "Correção de discursivas instantânea",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
-    badge: "🆕 NOVIDADE",
-    badgeVariant: "secondary" as const,
-    benefits: [
-      "Feedback em 30 segundos (vs. semanas de professor)",
-      "IA treinada com critérios de Cespe, FCC, FGV",
-      "Aprenda com análise detalhada de cada erro"
-    ]
-  }
-];
+import { Button } from "@/components/ui/button";
+import { Sparkles, Target, TrendingUp } from "lucide-react";
 
 export const Solution = () => {
   return (
-    <section className="py-20 bg-gradient-subtle" id="recursos">
+    <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-4 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
-              Como o AppConcurso resolve isso?
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div className="text-center space-y-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 text-primary">
+              <Sparkles className="w-6 h-6" />
+              <span className="text-sm font-semibold uppercase tracking-wider">A Solução</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold">
+              É por isso que criamos o 
+              <span className="bg-gradient-hero bg-clip-text text-transparent"> AppConcurso</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              3 pilares de organização inteligente
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              O AppConcurso é a sua resposta definitiva à fragmentação. Atuamos como seu{" "}
+              <span className="font-semibold text-foreground">"Cérebro Organizacional"</span>, e nossa{" "}
+              <span className="font-semibold text-foreground">Super Inteligência AC</span> é um mentor virtual 
+              completo que guia você do zero até a aprovação.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <div 
-                key={index} 
-                className="bg-card rounded-2xl border-2 border-border p-8 space-y-6 hover:shadow-futuristic-hover transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="space-y-4">
-                  <div className={`w-16 h-16 ${pillar.bgColor} rounded-2xl flex items-center justify-center`}>
-                    <pillar.icon className={`w-8 h-8 ${pillar.color}`} />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-heading font-semibold leading-tight">
-                      {pillar.title}
-                    </h3>
-                    <Badge variant={pillar.badgeVariant} className="text-xs">
-                      {pillar.badge}
-                    </Badge>
-                  </div>
-                </div>
-                
-                <ul className="space-y-3">
-                  {pillar.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex gap-2 text-sm text-muted-foreground">
-                      <span className="text-secondary font-bold flex-shrink-0">•</span>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="pt-4">
-                  <div className="w-full h-40 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm border border-border">
-                    [Screenshot Mockup]
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8 pt-8">
+            <div className="flex flex-col items-center text-center space-y-4 p-6 bg-card rounded-xl border border-border shadow-card">
+              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center shadow-glow">
+                <Target className="w-8 h-8 text-primary-foreground" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold">Centralização Total</h3>
+              <p className="text-muted-foreground">
+                Todos os seus cursinhos, editais e materiais em um único lugar organizado.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center space-y-4 p-6 bg-card rounded-xl border border-border shadow-card">
+              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center shadow-glow">
+                <Sparkles className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold">IA Personalizada</h3>
+              <p className="text-muted-foreground">
+                Plano de estudos adaptado às suas necessidades e pontos fracos específicos.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center space-y-4 p-6 bg-card rounded-xl border border-border shadow-card">
+              <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center shadow-glow">
+                <TrendingUp className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold">Foco no que Importa</h3>
+              <p className="text-muted-foreground">
+                Identifique e trabalhe exatamente no que cai na prova, sem dispersão.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center pt-8">
+            <Button size="xl" variant="hero">
+              Comece Grátis Agora
+            </Button>
           </div>
         </div>
       </div>
