@@ -22,10 +22,13 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "#0056b3",
+          light: "#4da3ff",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          dark: "#00c853",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -38,6 +41,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          gold: "#ffd700",
+          purple: "#9c27b0",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -118,42 +123,6 @@ export default {
         'card': 'var(--shadow-card)',
         'futuristic': '0 5px 15px rgba(0, 0, 0, 0.08)',
         'futuristic-hover': '0 8px 20px rgba(0, 0, 0, 0.15)',
-      },
-      fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
-        heading: ['Montserrat', 'system-ui', 'sans-serif'],
-      },
-      keyframes: {
-        ...{
-          "accordion-down": {
-            from: { height: "0", opacity: "0" },
-            to: { height: "var(--radix-accordion-content-height)", opacity: "1" },
-          },
-          "accordion-up": {
-            from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
-            to: { height: "0", opacity: "0" },
-          },
-          "fade-in": {
-            "0%": { opacity: "0", transform: "translateY(20px)" },
-            "100%": { opacity: "1", transform: "translateY(0)" },
-          },
-          "fade-in-up": {
-            "0%": { opacity: "0", transform: "translateY(30px)" },
-            "100%": { opacity: "1", transform: "translateY(0)" },
-          },
-          "scale-in": {
-            "0%": { transform: "scale(0.95)", opacity: "0" },
-            "100%": { transform: "scale(1)", opacity: "1" },
-          },
-          "glow-pulse": {
-            "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary-glow) / 0.3)" },
-            "50%": { boxShadow: "0 0 40px hsl(var(--primary-glow) / 0.5)" },
-          },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
       },
     },
   },

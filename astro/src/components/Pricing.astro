@@ -1,0 +1,191 @@
+---
+// Pricing Section V2
+import EmailCapture from './EmailCapture';
+---
+
+<section id="planos" class="py-20 bg-gradient-subtle">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <!-- Título -->
+      <div class="text-center space-y-4 animate-fade-in">
+        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">
+          Escolha seu plano
+        </h2>
+        <p class="text-xl text-muted-foreground">
+          Comece <span class="font-semibold text-foreground">grátis</span>. 
+          Evolua quando quiser.
+        </p>
+      </div>
+
+      <!-- Planos -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Plano Freemium -->
+        <div class="relative p-8 space-y-6 border-2 border-border shadow-futuristic transition-all duration-300 rounded-lg bg-card">
+          <!-- Badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="px-4 py-1.5 text-sm font-bold shadow-lg bg-secondary text-secondary-foreground rounded-full">
+              GRÁTIS PARA SEMPRE
+            </span>
+          </div>
+
+          <!-- Nome do plano -->
+          <div class="space-y-2 pt-4">
+            <h3 class="font-heading text-2xl font-bold">Freemium</h3>
+          </div>
+
+          <!-- Preço -->
+          <div class="space-y-1">
+            <div class="flex items-baseline gap-2">
+              <span class="font-heading text-5xl font-bold">R$ 0</span>
+              <span class="text-xl text-muted-foreground">/mês</span>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-3 py-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Até 3 concursos simultâneos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Organização básica de materiais</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">1 correção de discursiva/mês com IA 🆕</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Revisões espaçadas manuais</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-muted-foreground/40 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-sm text-muted-foreground/60">Planos personalizados por IA</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-muted-foreground/40 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-sm text-muted-foreground/60">Correções ilimitadas</span>
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <div class="pt-4">
+            <EmailCapture
+              client:load
+              variant="pricing"
+              size="medium"
+              buttonText="Começar grátis"
+              placeholder="seu@email.com"
+              segment="geral"
+            />
+          </div>
+        </div>
+
+        <!-- Plano Premium -->
+        <div class="relative p-8 space-y-6 border-4 border-primary shadow-futuristic-hover lg:scale-105 transition-all duration-300 rounded-lg bg-card">
+          <!-- Badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="px-4 py-1.5 text-sm font-bold shadow-lg bg-gradient-hero text-primary-foreground rounded-full animate-glow-pulse">
+              MAIS POPULAR
+            </span>
+          </div>
+
+          <!-- Nome do plano -->
+          <div class="space-y-2 pt-4">
+            <h3 class="font-heading text-2xl font-bold">Premium</h3>
+          </div>
+
+          <!-- Preço -->
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl text-muted-foreground line-through">R$ 98</span>
+              <span class="text-xs px-2 py-1 bg-destructive text-destructive-foreground rounded-md font-bold">
+                50% OFF - Acesso antecipado
+              </span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="font-heading text-5xl font-bold">R$ 49</span>
+              <span class="text-xl text-muted-foreground">/mês</span>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="space-y-3 py-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Concursos ilimitados</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Organização automática com IA</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Correções de discursivas ilimitadas 🆕</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Planos personalizados adaptativos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Mapas mentais gerados por IA</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Análise preditiva de performance</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-foreground">Suporte prioritário</span>
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <div class="pt-4">
+            <EmailCapture
+              client:load
+              variant="pricing"
+              size="medium"
+              buttonText="Garantir 50% OFF"
+              placeholder="seu@email.com"
+              segment="geral"
+            />
+          </div>
+
+          <!-- Nota -->
+          <p class="text-xs text-center text-muted-foreground pt-2">
+            ⚡ Oferta válida apenas para lista de espera
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

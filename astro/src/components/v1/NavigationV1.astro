@@ -1,0 +1,133 @@
+---
+// Navigation Component V1 - Exato como React
+---
+
+<nav class="nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#hero" class="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+        AppConcurso
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#hero" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Início
+        </a>
+        <a href="#pain-points" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Problemas
+        </a>
+        <a href="#solution" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Solução
+        </a>
+        <a href="#how-it-works" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Como Funciona
+        </a>
+        <a href="#features" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Recursos
+        </a>
+        <a href="#pricing" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          Preços
+        </a>
+        <a href="#faq" class="nav-link text-sm font-medium text-foreground hover:text-primary transition-colors">
+          FAQ
+        </a>
+        <a 
+          href="#pricing"
+          class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium transition-all hover:shadow-lg active:scale-95"
+        >
+          Começar Agora
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden p-2 text-foreground hover:text-primary transition-colors mobile-menu-toggle"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-6 h-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden py-4 border-t border-border">
+      <div class="flex flex-col space-y-4">
+        <a href="#hero" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Início
+        </a>
+        <a href="#pain-points" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Problemas
+        </a>
+        <a href="#solution" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Solução
+        </a>
+        <a href="#how-it-works" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Como Funciona
+        </a>
+        <a href="#features" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Recursos
+        </a>
+        <a href="#pricing" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          Preços
+        </a>
+        <a href="#faq" class="text-sm font-medium text-foreground hover:text-primary transition-colors mobile-link">
+          FAQ
+        </a>
+        <a 
+          href="#pricing"
+          class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-medium transition-all text-center mobile-link"
+        >
+          Começar Agora
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Scroll effect
+  const nav = document.querySelector('.nav-container') as HTMLElement;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      nav?.classList.add('bg-background/95', 'backdrop-blur-md', 'shadow-card', 'border-b', 'border-border');
+      nav?.classList.remove('bg-transparent');
+    } else {
+      nav?.classList.remove('bg-background/95', 'backdrop-blur-md', 'shadow-card', 'border-b', 'border-border');
+      nav?.classList.add('bg-transparent');
+    }
+  });
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+
+  toggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      const target = document.querySelector(href || '');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mobileMenu?.classList.add('hidden');
+        menuIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,122 @@
+---
+import EmailCapture from './EmailCapture';
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 bg-background overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-50" />
+  
+  <div class="container mx-auto px-4 py-12 relative z-10">
+    <div class="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
+      <!-- Coluna Esquerda - 60% -->
+      <div class="lg:col-span-3 space-y-8 animate-fade-in">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-2 rounded-full">
+          <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+          <span class="text-sm font-medium text-primary">
+            🚀 Em desenvolvimento - Acesso antecipado
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
+          Pare de se afogar em PDFs de{" "}
+          <span class="bg-primary text-primary-foreground px-3 py-1 rounded-lg shadow-lg underline decoration-primary/40 decoration-4 underline-offset-4">
+            10 cursinhos diferentes
+          </span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+          O <span class="font-semibold text-foreground">AppConcurso</span> é o hub inteligente 
+          que centraliza <span class="font-semibold text-foreground">TODO seu material</span>{" "}
+          + corrige suas discursivas com <span class="font-semibold text-primary">IA</span>
+        </p>
+
+        <!-- Formulário de Captura -->
+        <div class="pt-4">
+          <EmailCapture
+            client:load
+            variant="hero"
+            size="large"
+            placeholder="seu@email.com"
+            buttonText="Quero acesso antecipado ⚡"
+          />
+        </div>
+
+        <!-- Prova Social -->
+        <div class="flex items-center gap-3 pt-2">
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full border-2 border-background bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-semibold">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+              </svg>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-background bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-semibold">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+              </svg>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-background bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-semibold">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+              </svg>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-background bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-semibold">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-sm text-muted-foreground">
+            <span class="text-green-600 font-semibold">✓</span> Mais de{" "}
+            <span class="font-semibold text-foreground">847 concurseiros</span> já garantiram acesso
+          </p>
+        </div>
+      </div>
+
+      <!-- Coluna Direita - 40% -->
+      <div class="lg:col-span-2 animate-fade-in-up">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 opacity-20 blur-3xl rounded-3xl"></div>
+          <div class="relative bg-gradient-to-br from-background to-muted p-8 rounded-2xl shadow-futuristic-hover border border-border animate-float">
+            <!-- Mockup do Dashboard -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="text-xs text-muted-foreground">Dashboard</div>
+              </div>
+              
+              <div class="space-y-3">
+                <div class="h-8 bg-primary/20 rounded animate-pulse"></div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="h-24 bg-background rounded shadow-sm p-3">
+                    <div class="h-3 w-16 bg-muted rounded mb-2"></div>
+                    <div class="h-5 w-12 bg-primary/30 rounded"></div>
+                  </div>
+                  <div class="h-24 bg-background rounded shadow-sm p-3">
+                    <div class="h-3 w-16 bg-muted rounded mb-2"></div>
+                    <div class="h-5 w-12 bg-accent/30 rounded"></div>
+                  </div>
+                </div>
+                <div class="h-32 bg-background rounded shadow-sm p-3">
+                  <div class="h-3 w-24 bg-muted rounded mb-2"></div>
+                  <div class="space-y-2">
+                    <div class="h-2 bg-primary/20 rounded-full"></div>
+                    <div class="h-2 bg-primary/30 rounded-full w-3/4"></div>
+                    <div class="h-2 bg-primary/10 rounded-full w-1/2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
