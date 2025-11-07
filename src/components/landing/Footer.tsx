@@ -34,12 +34,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold font-heading text-foreground">
+            <h3 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
               AppConcurso
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Hub inteligente para organização de estudos para concursos públicos.
-              Centralize materiais e aproveite correção de discursivas com IA.
+              Sua plataforma completa de estudos para concursos públicos, 
+              potencializada por Inteligência Artificial.
             </p>
           </div>
           
