@@ -3,12 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Início", href: "#hero" },
-  { label: "Problemas", href: "#pain-points" },
-  { label: "Solução", href: "#solution" },
-  { label: "Como Funciona", href: "#how-it-works" },
-  { label: "Recursos", href: "#features" },
-  { label: "Preços", href: "#pricing" },
+  { label: "Recursos", href: "#recursos" },
+  { label: "Planos", href: "#planos" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -50,7 +46,7 @@ export const Navigation = () => {
                 e.preventDefault();
                 scrollToSection("#hero");
               }}
-              className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent"
+              className="text-xl font-bold font-heading text-primary"
             >
               AppConcurso
             </a>
@@ -73,8 +69,11 @@ export const Navigation = () => {
             </div>
 
             <div className="hidden md:block">
-              <Button variant="hero" size="sm">
-                Começar Agora
+              <Button 
+                className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold"
+                size="sm"
+              >
+                Entrar na Lista VIP
               </Button>
             </div>
 
@@ -112,8 +111,10 @@ export const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button variant="hero" className="w-full">
-                  Começar Agora
+                <Button 
+                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-semibold"
+                >
+                  Entrar na Lista VIP
                 </Button>
               </div>
             </div>

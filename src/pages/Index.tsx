@@ -1,12 +1,7 @@
 import { Navigation } from "@/components/landing/Navigation";
-import { Hero } from "@/components/landing/Hero";
-import { PainPoints } from "@/components/landing/PainPoints";
-import { Solution } from "@/components/landing/Solution";
-import { HowItWorks } from "@/components/landing/HowItWorks";
-import { Features } from "@/components/landing/Features";
-import { Pricing } from "@/components/landing/Pricing";
-import { FAQ } from "@/components/landing/FAQ";
-import { FinalCTA } from "@/components/landing/FinalCTA";
+import { NewHero } from "@/components/landing/NewHero";
+import { NewPainPoints } from "@/components/landing/NewPainPoints";
+import { NewSolution } from "@/components/landing/NewSolution";
 import { Footer } from "@/components/landing/Footer";
 
 const Index = () => {
@@ -14,27 +9,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <section id="hero">
-        <Hero />
+        <NewHero />
       </section>
-      <section id="pain-points">
-        <PainPoints />
-      </section>
-      <section id="solution">
-        <Solution />
-      </section>
-      <section id="how-it-works">
-        <HowItWorks />
-      </section>
-      <section id="features">
-        <Features />
-      </section>
-      <section id="pricing">
-        <Pricing />
-      </section>
-      <section id="faq">
-        <FAQ />
-      </section>
-      <FinalCTA />
+      <NewPainPoints />
+      <NewSolution />
       <Footer />
     </div>
   );
